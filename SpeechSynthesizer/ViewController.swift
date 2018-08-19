@@ -15,13 +15,8 @@ class ViewController: UIViewController, VoiceTableViewControllerDelegate {
     @IBOutlet weak var speakingText: UITextField!
     var speechVoice = AVSpeechSynthesisVoice()
     
-    @IBAction func speak(_ sender: UIButton) {
-        if let speechText = speakingText.text{
-            let synth = AVSpeechSynthesizer()
-            let speech = AVSpeechUtterance(string: speechText)
-            speech.voice = speechVoice
-            synth.speak(speech)
-        }
+    @IBAction func speak(_ sender: UIButton) { //<-- Add code here
+        
     }
     
     //delegate function

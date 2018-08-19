@@ -12,6 +12,7 @@
 		E1059A952126ED88000D4329 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E1059A932126ED88000D4329 /* Main.storyboard */; };
 		E1059A972126ED8C000D4329 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E1059A962126ED8C000D4329 /* Assets.xcassets */; };
 		E1059A9A2126ED8C000D4329 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E1059A982126ED8C000D4329 /* LaunchScreen.storyboard */; };
+		E1059AA22126FDF3000D4329 /* VoiceTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1059AA12126FDF3000D4329 /* VoiceTableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +23,7 @@
 		E1059A962126ED8C000D4329 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E1059A992126ED8C000D4329 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E1059A9B2126ED8C000D4329 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E1059AA12126FDF3000D4329 /* VoiceTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VoiceTableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,6 +59,7 @@
 				E1059A8F2126ED88000D4329 /* AppDelegate.swift */,
 				E1059A912126ED88000D4329 /* ViewController.swift */,
 				E1059A932126ED88000D4329 /* Main.storyboard */,
+				E1059AA12126FDF3000D4329 /* VoiceTableViewController.swift */,
 				E1059A962126ED8C000D4329 /* Assets.xcassets */,
 				E1059A982126ED8C000D4329 /* LaunchScreen.storyboard */,
 				E1059A9B2126ED8C000D4329 /* Info.plist */,
@@ -96,6 +99,7 @@
 				TargetAttributes = {
 					E1059A8B2126ED88000D4329 = {
 						CreatedOnToolsVersion = 9.4.1;
+						LastSwiftMigration = 1000;
 					};
 				};
 			};
@@ -135,6 +139,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E1059AA22126FDF3000D4329 /* VoiceTableViewController.swift in Sources */,
 				E1059A922126ED88000D4329 /* ViewController.swift in Sources */,
 				E1059A902126ED88000D4329 /* AppDelegate.swift in Sources */,
 			);
@@ -283,13 +288,14 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = P6DBU8DWFF;
 				INFOPLIST_FILE = SpeechSynthesizer/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.makeAppPie.SpeechSynthesizer;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -301,13 +307,14 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = P6DBU8DWFF;
 				INFOPLIST_FILE = SpeechSynthesizer/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.makeAppPie.SpeechSynthesizer;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;

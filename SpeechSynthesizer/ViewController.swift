@@ -2,17 +2,38 @@
 //  ViewController.swift
 //  SpeechSynthesizer
 //
-//  Created by Steven Lipton on 8/17/18.
-//  Copyright © 2018 Steven Lipton. All rights reserved.
+//  A exercise file for iOS Development Tips Weekly
+//  by Steven Lipton (C)2018, All rights reserved
+//  For videos go to http://bit.ly/TipsLinkedInLearning
+//  For code go to http://bit.ly/AppPieGithub
 //
-
 import UIKit
+import AVFoundation
 
-class ViewController: UIViewController {
+class ViewController: UIViewController, VoiceTableViewControllerDelegate {
 
+    @IBOutlet weak var speakingText: UITextField!
+    var speechVoice = AVSpeechSynthesisVoice()
+    
+    @IBAction func speak(_ sender: UIButton) {
+        if let speechText = speakingText.text{
+            let synth = AVSpeechSynthesizer()
+            let speech = AVSpeechUtterance(string: speechText)
+            speech.voice = speechVoice
+            synth.speak(speech)
+        }
+    }
+    
+    //delegate function
+    func didSelectVoice(voice: AVSpeechSynthesisVoice) {
+        speechVoice = voice
+        title = voice.name
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        title = "Default Voice"
     }
 
     override func didReceiveMemoryWarning() {
@@ -20,6 +41,12 @@ class ViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
 
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "voices"{
+           let  vc = segue.destination as! VoiceTableViewController
+            vc.delegate = self
+        }
+    }
 
 }
 
